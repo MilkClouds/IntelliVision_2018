@@ -11,6 +11,7 @@ files = [
 if not os.path.exists(savepath): os.mkdir(savepath)
 for f in files:
     url = baseurl + "/" + f
+    loc = savepath + "/" + f
     print("download:", url)
     if not os.path.exists(loc):
         req.urlretrieve(url, loc)
