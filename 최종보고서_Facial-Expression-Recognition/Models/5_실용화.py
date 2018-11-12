@@ -32,10 +32,9 @@ def build_model(in_shape):
         metrics=['accuracy'])
     return model
 
-modelName='./Models/CNN_model.hdf5'
+modelName='./CNN_model.hdf5'
 model = build_model((48,48,1))
 model.load_weights(modelName)
-
 
 def getExpression(imgs,model,returnMode='rate'):
 	X = []
@@ -78,13 +77,12 @@ def getExpression1(img,model):
 	pre = model.predict(X)
 	return pre
 
-# rootDir='./커스텀이미지'
-rootDir='./images/Surprise'
-imgs=glob.glob(rootDir+'/*.png')
+rootDir='./커스텀이미지'
+# rootDir='./images/Surprise'
+imgs=glob.glob(rootDir+'/*.*')
 if len(imgs)<1: raise(Exception("no input"))
 exp=getExpression(imgs,model,'1')
 
-# print(exp)
 html = ""
 for file,emo in exp.items():
 	print(file,":",emo)
@@ -94,7 +92,7 @@ for file,emo in exp.items():
 		  <p><img src="{1}" width=300></p>
 		  <p>감정:{2}</p>
 		</div>
-	""".format(os.path.basename(rootDir+file),
+	""".format(os.path.basename(rootDir+'/'+file),
 		rootDir+'/'+file,emo)
 html = "<html><body style='text-align:center;'>" + \
 	"<style> p { margin:0; padding:0; } </style>" + \

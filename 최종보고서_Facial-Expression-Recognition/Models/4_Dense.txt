@@ -1,27 +1,4 @@
 Using TensorFlow backend.
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-dense_1 (Dense)              (None, 512)               1180160   
-_________________________________________________________________
-activation_1 (Activation)    (None, 512)               0         
-_________________________________________________________________
-dropout_1 (Dropout)          (None, 512)               0         
-_________________________________________________________________
-dense_2 (Dense)              (None, 512)               262656    
-_________________________________________________________________
-activation_2 (Activation)    (None, 512)               0         
-_________________________________________________________________
-dropout_2 (Dropout)          (None, 512)               0         
-_________________________________________________________________
-dense_3 (Dense)              (None, 7)                 3591      
-_________________________________________________________________
-activation_3 (Activation)    (None, 7)                 0         
-=================================================================
-Total params: 1,446,407
-Trainable params: 1,446,407
-Non-trainable params: 0
-_________________________________________________________________
 Train on 26915 samples, validate on 8972 samples
 Epoch 1/30
 2018-11-11 18:11:08.522999: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
