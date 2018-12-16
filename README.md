@@ -9,6 +9,17 @@
 
 
 
+
+[ 표정 인식 요약 ]
+
+SVC는 29.7%, FC는 85.9%, CNN은 88.78%의 정확도
+전체 Python으로 설계
+- pandas, numpy, sklearn, Tensorflow, Keras, Pillow, 그 외 내장 모듈 사용
+- CUDA v9.0, cudnn v7.3
+- CMake, Visual Studio 2017 C++ Package
+
+
+
 나 혼자 다 짠 것 같지만....
 
 소스 제작: 최수환
